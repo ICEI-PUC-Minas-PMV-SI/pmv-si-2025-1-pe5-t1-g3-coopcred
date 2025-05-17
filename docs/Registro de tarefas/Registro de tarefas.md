@@ -35,8 +35,11 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 ## Integrante: Victor Hugo Vasquez da Silva:
 
 **Na primeira parte do projeto**, 
+Na primeira parte do projeto confeccionei em conjunto com a equipe as primeiras versoes do packet tracer, fiz o levantamento de preco no mercado para cada tipo de servidor, roteador, switch e infra estruturas que serao utilizados.
 
 **Na segunda parte do projeto**, 
+Na segunda etapa do projeto participei das reunioes sobre o desenvolvimento, testes e configuracao do ambiente AWS com a equipe, na entrega eu ajustei algumas observacoes da etapa 1, configurarando os IPs das WANS e roteadores internos de cada filial, adicionei tambem o wireless para convidades e funcionarios.
+
 
 
 ## Integrante: Vinícius Pereira Coelho:
