@@ -1,33 +1,7 @@
 const API = window.API_URL || 'http://44.204.138.207:3000';
-
-const loginForm = document.getElementById('login-form');
-const msgDiv = document.getElementById('msg');
 const usersTableBody = document.querySelector('#usersTable tbody');
 const addUserForm = document.getElementById('addUserForm');
-
-// LOGIN
-loginForm?.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(loginForm));
-
-  try {
-    const res = await fetch(`${API}/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-
-    const result = await res.json();
-    alert(result.message || result.error);
-
-    if (res.ok && result.token) {
-      localStorage.setItem('token', result.token);
-      window.location.href = 'dashboard.html';
-    }
-  } catch (err) {
-    alert('Erro ao tentar fazer login');
-  }
-});
+const msgDiv = document.getElementById('msg');
 
 // BUSCAR USUÁRIOS
 async function fetchUsers() {
@@ -41,6 +15,7 @@ async function fetchUsers() {
     if (!res.ok) throw new Error('Erro ao buscar usuários');
 
     const users = await res.json();
+    if(!usersTableBody) return;
     usersTableBody.innerHTML = '';
 
     users.forEach(user => {
@@ -60,8 +35,10 @@ async function fetchUsers() {
 
     addUserListeners();
   } catch (err) {
-    msgDiv.textContent = err.message;
-    msgDiv.className = 'error';
+    if(msgDiv){
+      msgDiv.textContent = err.message;
+      msgDiv.className = 'error';
+    }
   }
 }
 
