@@ -51,6 +51,7 @@
     <button type="submit">Adicionar</button>
   </form>
 
+  <script src="./js/env.js"></script>
   <script>
     const msgDiv = document.getElementById('msg');
     const usersTableBody = document.querySelector('#usersTable tbody');
@@ -59,7 +60,7 @@
     async function fetchUsers() {
       msgDiv.textContent = '';
       try {
-        const res = await fetch('http://44.204.138.207:3000/users');
+        const res = await fetch(`${window.API_URL}/users`);
         if (!res.ok) throw new Error('Erro ao buscar usuários');
         const users = await res.json();
 
@@ -96,7 +97,7 @@
             return;
           }
           try {
-            const res = await fetch(`http://44.204.138.207:3000/users/${id}`, {
+            const res = await fetch(`${window.API_URL}/users/${id}`, {
               method: 'PUT',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ username, email }),
@@ -117,7 +118,7 @@
           const id = btn.dataset.id;
           if (!confirm('Confirma exclusão do usuário?')) return;
           try {
-            const res = await fetch(`http://44.204.138.207:3000/users/${id}`, { method: 'DELETE' });
+            const res = await fetch(`${window.API_URL}/users/${id}`, { method: 'DELETE' });
             if (!res.ok) throw new Error('Erro ao deletar usuário');
             msgDiv.textContent = 'Usuário deletado com sucesso';
             msgDiv.className = 'success';
@@ -140,7 +141,7 @@
         return;
       }
       try {
-        const res = await fetch('http://44.204.138.207:3000/users', {
+        const res = await fetch(`${window.API_URL}/users`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, email }),

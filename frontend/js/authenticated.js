@@ -1,5 +1,3 @@
-const API = window.API_URL || 'http://44.204.138.207:3000';
-
 const loginForm = document.getElementById('login-form');
 const msgDiv = document.getElementById('msg');
 const usersTableBody = document.querySelector('#usersTable tbody');
@@ -11,7 +9,7 @@ loginForm?.addEventListener('submit', async (e) => {
   const data = Object.fromEntries(new FormData(loginForm));
 
   try {
-    const res = await fetch(`${API}/login`, {
+    const res = await fetch(`${window.API_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
@@ -32,7 +30,7 @@ loginForm?.addEventListener('submit', async (e) => {
 // BUSCAR USUÁRIOS
 async function fetchUsers() {
   try {
-    const res = await fetch(`${API}/users`, {
+    const res = await fetch(`${window.API_URL}/users`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
@@ -71,7 +69,7 @@ addUserForm?.addEventListener('submit', async (e) => {
   const data = Object.fromEntries(new FormData(addUserForm));
 
   try {
-    const res = await fetch(`${API}/users`, {
+    const res = await fetch(`${window.API_URL}/users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -103,7 +101,7 @@ function addUserListeners() {
       const setor = document.querySelector(`.edit-setor[data-id="${id}"]`).value;
 
       try {
-        const res = await fetch(`${API}/users/${id}`, {
+        const res = await fetch(`${window.API_URL}/users/${id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -130,7 +128,7 @@ function addUserListeners() {
       if (!confirm('Deseja realmente excluir este usuário?')) return;
 
       try {
-        const res = await fetch(`${API}/users/${id}`, {
+        const res = await fetch(`${window.API_URL}/users/${id}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`

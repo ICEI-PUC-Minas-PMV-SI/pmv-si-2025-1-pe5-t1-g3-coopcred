@@ -6,4 +6,6 @@ services:
     container_name: coopcred-frontend
     ports:
       - "8080:80"
+    environment:
+      BACKEND_URL: "http://44.204.138.207:3000"
     restart: unless-stopped

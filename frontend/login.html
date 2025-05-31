@@ -109,18 +109,18 @@
     &copy; 2025 CoopCred. Todos os direitos reservados.
   </footer>
 
+  <script src="js/env.js"></script>
   <script src="js/config.js"></script>
   <script>
     const loginForm = document.getElementById('login-form');
     const registerForm = document.getElementById('register-form');
-    const API = window.API_URL || 'http://44.204.138.207:3000';
 
     loginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(loginForm);
       const data = Object.fromEntries(formData.entries());
 
-      const res = await fetch(`${API}/login`, {
+      const res = await fetch(`${window.API_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -136,7 +136,7 @@
       const formData = new FormData(registerForm);
       const data = Object.fromEntries(formData.entries());
 
-      const res = await fetch(`${API}/register`, {
+      const res = await fetch(`${window.API_URL}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
