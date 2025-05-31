@@ -1,0 +1,31 @@
+name: KICS Security Scan
+
+on:
+  workflow_dispatch:
+
+jobs:
+  kics-scan:
+    runs-on: ubuntu-latest
+    name: KICS Security Scan
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: KICS Scan - Terraform
+        uses: checkmarx/kics-github-action@v1.7.0
+        with:
+          path: 'infraestrutura/terraform'
+          output_formats: 'sarif'
+          output_path: 'kics-results/terraform'
+          platform_type: terraform
+          fail_on: high,medium
+          
+      - name: KICS Scan - Ansible
+        uses: checkmarx/kics-github-action@v1.7.0
+        with:
+          path: 'infraestrutura/ansible'
+          output_formats: 'sarif'
+          output_path: 'kics-results/ansible'
+          platform_type: ansible
+          fail_on: high,medium
