@@ -1,6 +1,8 @@
-name: KICS Security Scan
+name: Routine Security Scan
 
 on:
+  schedule:
+    - cron: '0 2 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -29,3 +31,32 @@ jobs:
           output_path: 'kics-results/ansible'
           platform_type: ansible
           fail_on: high,medium
+
+  trivy-scan:
+    runs-on: ubuntu-latest
+    name: Trivy Security Scan
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Trivy Scan - Terraform
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'config'
+          scan-ref: 'infraestrutura/terraform'
+          format: 'sarif'
+          output: 'trivy-terraform-results.sarif'
+          exit-code: '1'
+          severity: 'CRITICAL,HIGH'
+          
+      - name: Trivy Scan - Ansible
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'config'
+          scan-ref: 'infraestrutura/ansible'
+          format: 'sarif'
+          output: 'trivy-ansible-results.sarif'
+          exit-code: '1'
+          severity: 'CRITICAL,HIGH'
+          skip-setup-trivy: true
