@@ -17,6 +17,7 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 
 **Na terceira parte do projeto**, participei ativamente junto ao grupo na configuração do sistema Zabbix, Além disso, contribui no desenvolvimento da aplicação, atuando tanto no front-end quanto no back-end, colaborando na programação e implementação das funcionalidades necessárias. Também fui ativa nas reuniões de alinhamento da etapa e realizei também a aplicação da page WEB no packet tracer e ajustes do de correçao da 1 etapa.
 
+**Na quarta parte do projeto**, Fui responsável pela elaboração da Política de Segurança da Informação (PSI) e da cartilha de boas práticas, bem como pela documentação da etapa. Além disso, atuei no desenvolvimento do front-end e back-end da aplicação, (em conjunto com Ítalo e Lucas). Fui ativa nas reuniões e alinhamento do projeto.
 
 ## Integrante: Lucas Morais Barcelos:
 
