@@ -7,5 +7,5 @@ services:
     ports:
       - "8080:80"
     environment:
-      BACKEND_URL: "http://44.204.138.207:3000"
+      BACKEND_URL: "http://34.239.94.100:3000"
     restart: unless-stopped
