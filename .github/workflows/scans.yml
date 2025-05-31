@@ -54,7 +54,6 @@ jobs:
           output: 'trivy-terraform-results.sarif'
           exit-code: '1'
           severity: 'CRITICAL,HIGH'
-          skip-setup-trivy: true
           
       - name: Trivy Scan - Ansible
         uses: aquasecurity/trivy-action@0.28.0
@@ -65,4 +64,3 @@ jobs:
           output: 'trivy-ansible-results.sarif'
           exit-code: '1'
           severity: 'CRITICAL,HIGH'
-          skip-setup-trivy: true
