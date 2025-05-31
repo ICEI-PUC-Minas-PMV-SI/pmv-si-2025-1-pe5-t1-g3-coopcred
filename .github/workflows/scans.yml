@@ -1,8 +1,6 @@
 name: Scans
-
 on:
   workflow_dispatch:
-
 jobs:
   kics-scan:
     runs-on: ubuntu-latest
@@ -29,7 +27,6 @@ jobs:
           output_path: 'kics-results/ansible'
           platform_type: ansible
           fail_on: high,medium
-
   trivy-scan:
     runs-on: ubuntu-latest
     name: Trivy Security Scan
@@ -38,6 +35,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
+      - name: Trivy Scan - Repository
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-repository-results.sarif'
+          exit-code: '1'
+          severity: 'CRITICAL,HIGH'
+          
       - name: Trivy Scan - Terraform
         uses: aquasecurity/trivy-action@0.28.0
         with:
@@ -47,6 +54,7 @@ jobs:
           output: 'trivy-terraform-results.sarif'
           exit-code: '1'
           severity: 'CRITICAL,HIGH'
+          skip-setup-trivy: true
           
       - name: Trivy Scan - Ansible
         uses: aquasecurity/trivy-action@0.28.0
