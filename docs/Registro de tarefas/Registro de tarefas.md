@@ -25,6 +25,9 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 
 **Na segunda etapa do projeto**, acompanhei ativamente o trabalho no ambiente em nuvem, participei das reuniões de apresentação para a turma, revisei o código Terraform e Ansible para a automação da configuração das máquinas. Junto com a equipe, configuramos o ambiente na AWS, realizei o acompanhamento da gravação dos vídeos de entrega e também fui responsável pela edição final do material.
 
+**Na terceira etapa do projeto**, fiquei responsável pela parte inicial do backend, desenvolvendo o banco de dados e a lógica de cadastro de usuários.
+
+**Na quarta etapa do projeto**, continuei no desenvolvimento do backend, agora focado na implementação do CRUD de contas bancárias.
 
 
 ## Integrante: Pedro Henrique Nunes Alves:
