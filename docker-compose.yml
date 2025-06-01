@@ -40,7 +40,7 @@ services:
     ports:
       - "8080:80"
     environment:
-      BACKEND_URL: "http://10.100.10:3000"
+      BACKEND_URL: "http://44.200.115.187:3000"
     networks:
       - coopcred-net
 
