@@ -39,6 +39,8 @@ services:
       - ./frontend:/usr/share/nginx/html:ro
     ports:
       - "8080:80"
+    environment:
+      BACKEND_URL: "http://10.100.10:3000"
     networks:
       - coopcred-net
 
