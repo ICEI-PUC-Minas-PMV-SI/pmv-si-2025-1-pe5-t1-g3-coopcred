@@ -51,6 +51,10 @@ app.post("/register", async (req, res) => {
 });
 
 // Login
+function generateSimpleToken() {
+  return Math.random().toString(36).substr(2) + Date.now().toString(36);
+}
+
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
@@ -65,19 +69,21 @@ app.post("/login", async (req, res) => {
       return res.status(401).json({ error: "Usuário ou senha inválidos" });
     }
 
-    // Compara senha
     const match = await bcrypt.compare(password, user.password);
     if (!match) {
       return res.status(401).json({ error: "Usuário ou senha inválidos" });
     }
 
-    // Login OK - aqui você pode criar um token JWT, sessão, etc
-    res.json({ message: "Login bem-sucedido" });
+    const token = generateSimpleToken();
+
+
+    res.json({ message: "Login bem-sucedido", token });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Erro no servidor" });
   }
 });
+
 
 // Listar usuários
 app.get("/users", async (req, res) => {

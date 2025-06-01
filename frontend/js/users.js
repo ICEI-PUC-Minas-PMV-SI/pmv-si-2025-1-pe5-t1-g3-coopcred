@@ -1,4 +1,4 @@
-const API = window.API_URL || 'http://44.204.138.207:3000';
+const API = window.API_URL;
 const usersTableBody = document.querySelector('#usersTable tbody');
 const addUserForm = document.getElementById('addUserForm');
 const msgDiv = document.getElementById('msg');

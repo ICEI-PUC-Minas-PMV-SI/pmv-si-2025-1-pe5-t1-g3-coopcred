@@ -32,12 +32,15 @@ services:
       - coopcred-net
 
   frontend:
-    image: nginx:alpine
+    build:
+      context: ./frontend
     container_name: coopcred-frontend
     volumes:
-      - ./frontend:/usr/share/nginx/html:ro
+      - ./frontend:/usr/share/nginx/html
     ports:
       - "8080:80"
+    environment:
+      BACKEND_URL: "http://44.200.115.187:3000"
     networks:
       - coopcred-net
 

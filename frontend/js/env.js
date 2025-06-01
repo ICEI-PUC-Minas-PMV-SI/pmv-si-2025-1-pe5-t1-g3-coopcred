@@ -1,0 +1,1 @@
+window.API_URL = "__BACKEND_URL__";

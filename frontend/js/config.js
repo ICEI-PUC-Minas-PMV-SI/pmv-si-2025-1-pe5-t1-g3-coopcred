@@ -1,12 +1,10 @@
-const backendUrl = "http://44.204.138.207:3000";
-
 document.getElementById("form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const nome = document.getElementById("nome").value;
   const valor = document.getElementById("valor").value;
 
   try {
-    const res = await fetch(`${backendUrl}/dados`, {
+    const res = await fetch(`${window.API_URL}/dados`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nome, valor }),

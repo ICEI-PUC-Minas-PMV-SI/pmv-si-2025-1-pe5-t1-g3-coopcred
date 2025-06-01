@@ -2,8 +2,10 @@ version: '3.8'
 
 services:
   frontend:
-    image: coopcred-frontend:1.0.0
+    build: .
     container_name: coopcred-frontend
     ports:
       - "8080:80"
+    environment:
+      BACKEND_URL: "http://44.200.115.187:3000"
     restart: unless-stopped
