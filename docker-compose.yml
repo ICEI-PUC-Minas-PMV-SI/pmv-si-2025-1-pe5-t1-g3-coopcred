@@ -32,7 +32,8 @@ services:
       - coopcred-net
 
   frontend:
-    image: nginx:alpine
+    build:
+      context: ./frontend
     container_name: coopcred-frontend
     volumes:
       - ./frontend:/usr/share/nginx/html:ro
