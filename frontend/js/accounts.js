@@ -1,3 +1,4 @@
+// Navegação das seções do dashboard (parte contas)
 const navButtons = document.querySelectorAll('.nav-btn');
 const sections = document.querySelectorAll('.section-panel');
 
@@ -18,33 +19,33 @@ const contaNumeroInput = document.getElementById('conta-numero');
 function gerarNumeroConta() {
   return Math.floor(100000 + Math.random() * 900000).toString();
 }
-contaNumeroInput.value = gerarNumeroConta();
+if(contaNumeroInput) contaNumeroInput.value = gerarNumeroConta();
 
-  // Máscara CPF
-  const cpfInput = document.getElementById('conta-cpf');
-  cpfInput.addEventListener('input', function () {
-    let cpf = this.value.replace(/\D/g, '');
-    cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-    cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-    cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-    this.value = cpf;
-  });
+// Máscara CPF
+const cpfInput = document.getElementById('conta-cpf');
+cpfInput?.addEventListener('input', function () {
+  let cpf = this.value.replace(/\D/g, '');
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+  this.value = cpf;
+});
 
-  // Máscara telefone
-  const telefoneInput = document.getElementById('conta-telefone');
-  telefoneInput.addEventListener('input', function () {
-    let tel = this.value.replace(/\D/g, '');
-    tel = tel.replace(/^(\d{2})(\d)/g, '($1) $2');
-    tel = tel.replace(/(\d{5})(\d{1,4})$/, '$1-$2');
-    this.value = tel;
-  });
+// Máscara telefone
+const telefoneInput = document.getElementById('conta-telefone');
+telefoneInput?.addEventListener('input', function () {
+  let tel = this.value.replace(/\D/g, '');
+  tel = tel.replace(/^(\d{2})(\d)/g, '($1) $2');
+  tel = tel.replace(/(\d{5})(\d{1,4})$/, '$1-$2');
+  this.value = tel;
+});
 
 // Armazenamento local temporário das contas
 const contas = [];
 
 // Formulário de cadastro de conta
 const formConta = document.getElementById('conta-cadastro-form');
-formConta.addEventListener('submit', (e) => {
+formConta?.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const nome = formConta['conta-nome'].value.trim();
@@ -62,7 +63,7 @@ formConta.addEventListener('submit', (e) => {
   alert('Conta cadastrada com sucesso!');
 
   formConta.reset();
-  contaNumeroInput.value = gerarNumeroConta();
+  if(contaNumeroInput) contaNumeroInput.value = gerarNumeroConta();
 
   preencherTabelaContas(contas);
 });
@@ -71,6 +72,7 @@ formConta.addEventListener('submit', (e) => {
 const tabelaContasBody = document.querySelector('#tabela-contas tbody');
 
 function preencherTabelaContas(lista) {
+  if(!tabelaContasBody) return;
   tabelaContasBody.innerHTML = '';
 
   if (lista.length === 0) {
@@ -95,7 +97,7 @@ function preencherTabelaContas(lista) {
 
 // Filtro de busca
 const buscaInput = document.getElementById('busca-conta');
-buscaInput.addEventListener('input', () => {
+buscaInput?.addEventListener('input', () => {
   const termo = buscaInput.value.toLowerCase();
 
   const contasFiltradas = contas.filter((conta) => {
@@ -108,30 +110,3 @@ buscaInput.addEventListener('input', () => {
 
   preencherTabelaContas(contasFiltradas);
 });
-
-// Formulário de cadastro de usuário
-const formUsuario = document.getElementById('usuario-cadastro-form');
-if (formUsuario) {
-  formUsuario.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const nome = formUsuario['usuario-nome'].value.trim();
-    const email = formUsuario['usuario-email'].value.trim();
-    const senha = formUsuario['usuario-senha'].value;
-    const setor = formUsuario['usuario-setor'].value.trim();
-
-    alert(`Usuário ${nome} cadastrado com sucesso!`);
-
-    formUsuario.reset();
-  });
-}
-
-// Logout
-const logoutBtn = document.getElementById('logout-btn');
-if (logoutBtn) {
-  logoutBtn.addEventListener('click', () => {
-    localStorage.removeItem('token');
-    alert('Logout realizado!');
-    window.location.href = 'index.html'; 
-  });
-}

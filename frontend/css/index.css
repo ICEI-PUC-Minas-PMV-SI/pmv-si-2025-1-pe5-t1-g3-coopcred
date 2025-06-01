@@ -192,6 +192,24 @@ header {
   box-shadow: 0 3px 9px #a5770099;
 }
 
+/* MENSAGENS DE STATUS LOGIN */
+#msg {
+  min-height: 1.2em;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+
+#msg.error {
+  color: #d93025; /* vermelho */
+}
+
+#msg.success {
+  color: #188038; /* verde */
+}
+
 /* FOOTER */
 footer {
   background-color: #f0f0f0;

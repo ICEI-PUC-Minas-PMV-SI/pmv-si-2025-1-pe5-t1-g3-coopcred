@@ -1,36 +1,12 @@
-const loginForm = document.getElementById('login-form');
-const msgDiv = document.getElementById('msg');
+const API = window.API_URL;
 const usersTableBody = document.querySelector('#usersTable tbody');
 const addUserForm = document.getElementById('addUserForm');
-
-// LOGIN
-loginForm?.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(loginForm));
-
-  try {
-    const res = await fetch(`${window.API_URL}/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-
-    const result = await res.json();
-    alert(result.message || result.error);
-
-    if (res.ok && result.token) {
-      localStorage.setItem('token', result.token);
-      window.location.href = 'dashboard.html';
-    }
-  } catch (err) {
-    alert('Erro ao tentar fazer login');
-  }
-});
+const msgDiv = document.getElementById('msg');
 
 // BUSCAR USUÁRIOS
 async function fetchUsers() {
   try {
-    const res = await fetch(`${window.API_URL}/users`, {
+    const res = await fetch(`${API}/users`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
@@ -39,6 +15,7 @@ async function fetchUsers() {
     if (!res.ok) throw new Error('Erro ao buscar usuários');
 
     const users = await res.json();
+    if(!usersTableBody) return;
     usersTableBody.innerHTML = '';
 
     users.forEach(user => {
@@ -58,8 +35,10 @@ async function fetchUsers() {
 
     addUserListeners();
   } catch (err) {
-    msgDiv.textContent = err.message;
-    msgDiv.className = 'error';
+    if(msgDiv){
+      msgDiv.textContent = err.message;
+      msgDiv.className = 'error';
+    }
   }
 }
 
@@ -69,7 +48,7 @@ addUserForm?.addEventListener('submit', async (e) => {
   const data = Object.fromEntries(new FormData(addUserForm));
 
   try {
-    const res = await fetch(`${window.API_URL}/users`, {
+    const res = await fetch(`${API}/users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +58,7 @@ addUserForm?.addEventListener('submit', async (e) => {
     });
 
     const result = await res.json();
-    alert(result.message || result.error);
+    alert(result.message || result.error || 'Resposta desconhecida');
 
     if (res.ok) {
       addUserForm.reset();
@@ -101,7 +80,7 @@ function addUserListeners() {
       const setor = document.querySelector(`.edit-setor[data-id="${id}"]`).value;
 
       try {
-        const res = await fetch(`${window.API_URL}/users/${id}`, {
+        const res = await fetch(`${API}/users/${id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -128,7 +107,7 @@ function addUserListeners() {
       if (!confirm('Deseja realmente excluir este usuário?')) return;
 
       try {
-        const res = await fetch(`${window.API_URL}/users/${id}`, {
+        const res = await fetch(`${API}/users/${id}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -146,7 +125,7 @@ function addUserListeners() {
   });
 }
 
-// Executa fetchUsers se estiver na página de dashboard
+// Carrega os usuários automaticamente se a tabela existir (dashboard.html)
 if (usersTableBody) {
   fetchUsers();
 }
