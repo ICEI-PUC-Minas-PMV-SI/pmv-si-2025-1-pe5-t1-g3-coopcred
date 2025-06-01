@@ -18,7 +18,7 @@ const pool = new Pool({
 
 // Registro
 app.post("/register", async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, setor } = req.body;
 
   if (!username || !email || !password) {
     return res.status(400).json({ error: "Preencha todos os campos" });
@@ -39,8 +39,8 @@ app.post("/register", async (req, res) => {
 
     // Insere usuário no banco
     await pool.query(
-      "INSERT INTO usuarios (username, email, password) VALUES ($1, $2, $3)",
-      [username, email, hashedPassword]
+      "INSERT INTO usuarios (username, email, password, setor) VALUES ($1, $2, $3, $4)",
+      [username, email, hashedPassword, setor]
     );
 
     res.status(201).json({ message: "Usuário registrado com sucesso" });
@@ -89,7 +89,7 @@ app.post("/login", async (req, res) => {
 app.get("/users", async (req, res) => {
   try {
     const result = await pool.query(
-      "SELECT id, username, email FROM usuarios ORDER BY id"
+      "SELECT id, username, email, setor FROM usuarios ORDER BY id"
     );
     res.json(result.rows);
   } catch (err) {

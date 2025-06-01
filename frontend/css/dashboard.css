@@ -225,6 +225,23 @@ outline: none;
 box-shadow: 0 0 6px #9fcc43aa;
 }
 
+#busca-usuario {
+width: 100%;
+padding: 10px 14px;
+border: 2px solid #d0d7d3;
+border-radius: 8px;
+font-size: 1rem;
+margin-bottom: 0.8rem;
+transition: border-color 0.3s ease;
+max-width: 600px;
+}
+
+#busca-usuario:focus {
+border-color: #9fcc43;
+outline: none;
+box-shadow: 0 0 6px #9fcc43aa;
+}
+
 /* ANIMAÇÃO SIMPLES */
 @keyframes fadeIn {
 from {
