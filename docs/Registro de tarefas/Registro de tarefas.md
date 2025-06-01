@@ -38,6 +38,9 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 
 **Na terceira parte do projeto**, Participei ativamente do processo de deploy e pesquisa da solução de monitoramento Zabbix, incluindo a instalação e configuração dos agentes nas máquinas monitoradas. Além disso, contribuí na estruturação e desenvolvimento do frontend e backend da aplicação. Responsável por desenvolver a dashboard do Grafana de monitoramento das máquinas zabbix e também deployar o grafana. Também fui ativo nas reuniões e na comunicacao em equipe.
 
+**Na quarta etapa do projeto**, participei das reuniões com o grupo e professores, auxiliei no desenvolvimento front-end e backend da aplicação, bem como desenvolvi a pipeline de análise de vulnerabilidades dos códigos do repositório (Ansible, Terraform, Javascript) utilizando KICS e Trivy. Auxiliei também no desenvolvimento da documentação.
+
+
 ## Integrante: Victor Hugo Vasquez da Silva:
 
 **Na primeira parte do projeto**, Na primeira parte do projeto confeccionei em conjunto com a equipe as primeiras versoes do packet tracer, fiz o levantamento de preco no mercado para cada tipo de servidor, roteador, switch e infra estruturas que serao utilizados.
