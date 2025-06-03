@@ -7,6 +7,8 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 
 **Na terceira parte do projeto**, realizei parte do processo de implementação e pesquisa da solução de monitoramento Zabbix do VirtualBox, contribui na instalação e na configuração dos agentes nas máquinas monitoradas. Também fui ativo nas reuniões, na comunicação em equipe e em algumas pequenas correções no packet tracer para o funcionamento adequado de alguns aspectos ainda pendentes.
 
+**Na quarta etapa do projeto**, participei em aspectos para o funcionamento do front-end e do back-end (junto ao Lucas, Jully e auxilio do Pedro em questões de ambiente de configuração) no processo de CRUD de usuarios, continuei realizando ajustes no packet tracer para funcionamento adequado no aspecto de segurança e ACLs e fui ativos nas reuniões e alinhamentos entre os integrantes da equipe.
+
 
 ## Integrante: Jully Anne Roman Palhano Dutra:
 
