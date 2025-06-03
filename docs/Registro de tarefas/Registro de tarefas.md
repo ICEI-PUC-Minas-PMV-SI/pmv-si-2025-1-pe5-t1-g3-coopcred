@@ -59,3 +59,5 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 **Na segunda parte do projeto**, realizei a configuração do ambiente no VirtualBox (com a participação do Ítalo e da Jully), incluindo a configuração do DHCP, Active Directory, Políticas de Grupo e DNS. Além disso, contribuiu para a gravação da demonstração e ficou responsável pela edição do vídeo explicativo. Na documentação, implementou as imagens do VirtualBox. Participou ativamente de todas as reuniões de alinhamento da etapa, garantindo a comunicação eficiente entre a equipe.
 
 **Na terceira parte do projeto**, Participei ativamente do processo de pesquisa da solução de monitoramento Zabbix do VirtualBox, incluindo a instalação e configuração dos agentes nas máquinas monitoradas. Também fui ativo nas reuniões e na comunicação em equipe.
+
+**Na quarta etapa do projeto**, participei das reuniões com o grupo e professores, realizei algumas correções das últimas etapas. 
