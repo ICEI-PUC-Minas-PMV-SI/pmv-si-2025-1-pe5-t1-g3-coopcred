@@ -36,9 +36,9 @@ Com a missão de oferecer serviços financeiros acessíveis e seguros e a visão
 | Etapa         | Atividades |
 |  :----:   | ----------- |
 | ETAPA 1         |[Análise, Planejamento e Prototipação da Solução](docs/context.md) <br> |
-| ETAPA 2         |[Preparação de ambiente em Nuvem e Virtualização Local](docs/cloud-computing.md)  |
-| ETAPA 3         |[Gerência e Monitoração de ambientes de redes](docs/development.md) |
-| ETAPA 4         |[Mecanismos de Segurança](docs/development.md)|
+| ETAPA 2         |[Preparação de ambiente em Nuvem e Virtualização Local](docs/Projeto_da_infraestrutura_de_rede___Cooperativa_Bacaria_CoopCred.pdf)  |
+| ETAPA 3         |[Gerência e Monitoração de ambientes de redes](docs/Projeto_da_infraestrutura_de_rede___Cooperativa_Bacaria_CoopCred.pdf) |
+| ETAPA 4         |[Mecanismos de Segurança](docs/Projeto_da_infraestrutura_de_rede___Cooperativa_Bacaria_CoopCred.pdf)|
 | ETAPA 5         | [Apresentação](presentation/README.md) |
 
 
