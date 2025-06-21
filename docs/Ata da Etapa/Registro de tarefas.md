@@ -63,3 +63,6 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 **Na terceira parte do projeto**, Participei ativamente do processo de pesquisa da solução de monitoramento Zabbix do VirtualBox, incluindo a instalação e configuração dos agentes nas máquinas monitoradas. Também fui ativo nas reuniões e na comunicação em equipe.
 
 **Na quarta etapa do projeto**, participei das reuniões com o grupo e professores, realizei algumas correções das últimas etapas. 
+
+**Na quinta etapa do projeto**, participei das reuniões com o grupo e professores, e contribui na construção da apresentação final. 
+
