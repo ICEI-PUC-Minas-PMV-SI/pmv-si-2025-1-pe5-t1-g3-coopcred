@@ -9,6 +9,8 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 
 **Na quarta etapa do projeto**, participei em aspectos para o funcionamento do front-end e do back-end (junto ao Lucas, Jully e auxilio do Pedro em questões de ambiente de configuração) no processo de CRUD de usuarios, continuei realizando ajustes no packet tracer para funcionamento adequado no aspecto de segurança e ACLs e fui ativos nas reuniões e alinhamentos entre os integrantes da equipe.
 
+**Na quinta etapa do projeto**, realizei as correções finais no packet tracer para tratativas da rede wifi, apoiei na construção da apresentação e definição dos topicos a serem exibidos, fui ativo nas reuniões e alinhamentos entre todos do projeto.
+
 
 ## Integrante: Jully Anne Roman Palhano Dutra:
 
