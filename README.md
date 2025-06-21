@@ -39,7 +39,7 @@ Com a missão de oferecer serviços financeiros acessíveis e seguros e a visão
 | ETAPA 2         |[Preparação de ambiente em Nuvem e Virtualização Local](docs/Projeto_da_infraestrutura_de_rede___Cooperativa_Bacaria_CoopCred.pdf)  |
 | ETAPA 3         |[Gerência e Monitoração de ambientes de redes](docs/Projeto_da_infraestrutura_de_rede___Cooperativa_Bacaria_CoopCred.pdf) |
 | ETAPA 4         |[Mecanismos de Segurança](docs/Projeto_da_infraestrutura_de_rede___Cooperativa_Bacaria_CoopCred.pdf)|
-| ETAPA 5         | [Apresentação](presentation/README.md) |
+| ETAPA 5         | [Apresentação](docs/apresentacao_coopcred.pptx) |
 
 
 # Apresentação
