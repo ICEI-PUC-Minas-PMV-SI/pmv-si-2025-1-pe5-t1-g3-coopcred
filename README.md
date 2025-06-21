@@ -44,7 +44,7 @@ Com a missão de oferecer serviços financeiros acessíveis e seguros e a visão
 
 # Apresentação
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+<li><a href="docs/apresentacao_coopcred.pptx"> Apresentação da solução</a></li>
 
 
 
