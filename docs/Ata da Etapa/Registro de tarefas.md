@@ -16,12 +16,14 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 
 **Na primeira parte do projeto**, foi responsável pela documentação técnica da fase, organizou a topologia da arquitetura e participou, em conjunto com a equipe, da configuração no Packet Tracer. Também elaborou a planilha de equipamentos, em colaboração com Victor e Ítalo, realizando a separação por filial e por setor, além de calcular os links necessários para a infraestrutura de rede.
 
-**Na segunda parte do projeto**, foi responsável pela configuração do servidor FTP, colaborou ativamente na elaboração do documento técnico com as informações da etapa e também auxiliou na configuração do ambiente virtualizado no VirtualBox (Com a participação do Ítalo e Vinícius).Partucipou da gravação do vídeo de demonstração do VirtualBOX.
+**Na segunda parte do projeto**, fui responsável pela configuração do servidor FTP, colaborou ativamente na elaboração do documento técnico com as informações da etapa e também auxiliou na configuração do ambiente virtualizado no VirtualBox (Com a participação do Ítalo e Vinícius).Partucipou da gravação do vídeo de demonstração do VirtualBOX.
 Participou ativamente em todas as reuniões de alinhamento da etapa.
 
 **Na terceira parte do projeto**, participei ativamente junto ao grupo na configuração do sistema Zabbix, Além disso, contribui no desenvolvimento da aplicação, atuando tanto no front-end quanto no back-end, colaborando na programação e implementação das funcionalidades necessárias. Também fui ativa nas reuniões de alinhamento da etapa e realizei também a aplicação da page WEB no packet tracer e ajustes do de correçao da 1 etapa.
 
 **Na quarta parte do projeto**, Fui responsável pela elaboração da Política de Segurança da Informação (PSI) e da cartilha de boas práticas, bem como pela documentação da etapa. Além disso, atuei no desenvolvimento do front-end e back-end da aplicação, (em conjunto com Ítalo e Lucas). Fui ativa nas reuniões e alinhamento do projeto.
+
+**Na quinta etapa do projeto**, fui responsável pela elaboração da apresentação do projeto, bem como pela formatação do documento final. Atuei de forma ativa nas reuniões e nos alinhamentos com toda a equipe, contribuindo para a organização e o progresso das atividades do projeto.
 
 ## Integrante: Lucas Morais Barcelos:
 
