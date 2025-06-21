@@ -44,6 +44,8 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 
 **Na quarta etapa do projeto**, participei das reuniões com o grupo e professores, auxiliei no desenvolvimento front-end e backend da aplicação, bem como desenvolvi a pipeline de análise de vulnerabilidades dos códigos do repositório (Ansible, Terraform, Javascript) utilizando KICS e Trivy. Auxiliei também no desenvolvimento da documentação.
 
+**Na quinta etapa do projeto**, participei das reuniões com o grupo e professores, auxiliei também no desenvolvimento da documentação, slides, ordem de apresentacao final e diagramas do projeto.
+
 
 ## Integrante: Victor Hugo Vasquez da Silva:
 
@@ -63,3 +65,6 @@ Participou ativamente em todas as reuniões de alinhamento da etapa.
 **Na terceira parte do projeto**, Participei ativamente do processo de pesquisa da solução de monitoramento Zabbix do VirtualBox, incluindo a instalação e configuração dos agentes nas máquinas monitoradas. Também fui ativo nas reuniões e na comunicação em equipe.
 
 **Na quarta etapa do projeto**, participei das reuniões com o grupo e professores, realizei algumas correções das últimas etapas. 
+
+**Na quinta etapa do projeto**, participei das reuniões com o grupo e professores, e contribui na construção da apresentação final. 
+
